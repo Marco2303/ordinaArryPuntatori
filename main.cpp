@@ -42,9 +42,10 @@ int main()
     string* punArray[MAX_ARRAY] = {};
 
 
+
    //GENERO LE TRINGHE PER ARRAY
    cout << " INIZIO generazione array di elementi char" << endl;
-   string str = "";
+
    srand(time(NULL));
     for(int I=0;I<MAX_ARRAY;I++){
         for(int a=0;a<CHAR_MAX;a++){
@@ -58,6 +59,7 @@ int main()
     ordinaArray(strArray);
     ordinaArrayPun(punArray);
 
+    system("pause");
     return 0;
 }
 
@@ -104,7 +106,6 @@ void ordinaArray(string strArray2[MAX_ARRAY]){
             }
         }
     }
-
     time_t time_fine = time(0);
 
     cout << "Tempo impiegato ad ordinare un copia di array: SECONDI: ----> " << difftime(time_fine,time_inizio) << endl;
