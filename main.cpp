@@ -14,6 +14,7 @@ using namespace std;
 const int MAX_ARRAY = 30000;
 const int CHAR_MAX = 500;
 
+
 void ordinaArray(string strArray2[MAX_ARRAY]);
 void ordinaArrayPun(string *strArray3[MAX_ARRAY]);
 
@@ -23,11 +24,12 @@ int main()
     cout << "=====================================================================" << endl;
     cout << " Questo programma genera un array con i segienti elementi" << endl;
     cout << endl;
-    cout << " Numero di elementi array: " << MAX_ARRAY << endl;
+    cout << " Numero di iterazioni: " << MAX_ARRAY << endl;
     cout << " Char che compongono la riga dell'array: " << CHAR_MAX << endl;
+    cout << " Totale righe dell'array: " << CHAR_MAX*MAX_ARRAY << " di byte " << endl;
     cout << endl;
     cout << " Prima viene lanciata la funziona di ordinamento in memoria" << endl;
-    cout << " che usa una copia dell'array, poi vine lancta una seconda" << endl;
+    cout << " che usa una copia dell'array, poi vine lancita una seconda" << endl;
     cout << " funzione che usa sempre lo stesso array ma gli veiene passato" << endl;
     cout << " il puntatore all'array e l'rdimaneto avviene usando i puntatori" << endl;
     cout << " a questo array."  << endl;
@@ -46,7 +48,6 @@ int main()
    srand(time(NULL));
     for(int I=0;I<MAX_ARRAY;I++){
         for(int a=0;a<CHAR_MAX;a++){
-            //cout << " " << rand()%25+97 << endl;
             strArray[I] = string(CHAR_MAX,'a'+rand()%26);
             }
     }
@@ -80,7 +81,7 @@ void ordinaArrayPun(string *strArray3[MAX_ARRAY]){
 
     time_t time_fine = time(0);
 
-    cout << "Tempo impiegato ad ordinare lo stesso array passato come punattore SECONDI: ----> " << difftime(time_fine,time_inizio) << endl;
+    cout << " Tempo impiegato ad ordinare lo stesso array passato come puntatore SECONDI: ----> " << difftime(time_fine,time_inizio) << endl;
     cout << "*********************************************************************" << endl;
     cout << endl;
 
